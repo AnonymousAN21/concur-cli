@@ -1,8 +1,4 @@
-Here’s a complete **README.md** file for your concurrent API testing tool using `axios` and `Node.js`. You can copy this into your project folder:
 
----
-
-````markdown
 # 🧪 Concurrent API Load Tester (CLI)
 
 A simple and customizable **CLI tool** to simulate concurrent user requests to an API endpoint using `axios` and `Node.js`. Supports multiple HTTP methods, dynamic request bodies, request timeout detection, and performance summary stats.
