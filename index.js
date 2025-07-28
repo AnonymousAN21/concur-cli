@@ -19,6 +19,7 @@ async function main() {
   const users = parseInt(await ask('Number of users to simulate: '), 10);
   const method = (await ask('HTTP method (GET, POST, PUT, DELETE): ')).toUpperCase();
   const endpoint = await ask('API endpoint URL: ');
+  const origin = await ask('Origin (leave blank for none): ');
 
   let fields = {};
   if (method === 'POST' || method === 'PUT') {
@@ -39,12 +40,18 @@ async function main() {
 
   async function testUser(i) {
     const start = performance.now();
-
+    
     const config = {
       method,
       url: endpoint,
       timeout: 5000,
+      headers: {}
     };
+
+    if (origin.trim()) {
+      config.headers['Origin'] = origin.trim();
+    }
+
 
     try {
       if (method === 'GET' || method === 'DELETE') {
