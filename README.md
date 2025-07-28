@@ -50,6 +50,7 @@ You'll be asked the following:
 Number of users to simulate:
 HTTP method (GET, POST, PUT, DELETE):
 API endpoint URL:
+Origin (leave blank for none):
 ```
 
 If you select `POST` or `PUT`, you'll also define the request body:
